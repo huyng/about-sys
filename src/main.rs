@@ -711,7 +711,7 @@ fn print_system_info(info: &SystemInfo) {
     // 🖥️ and ⚠️ get an extra space — their variation selector may render
     // 1-column wide instead of 2 in some terminals.
     println!("🖥️ Hostname:            {}", info.hostname);
-    println!("💿 Operating System:    {}", info.os_name);
+    println!("🧮 Operating System:    {}", info.os_name);
     if !info.os_version.is_empty() {
         println!("📌 OS Version:          {}", info.os_version);
     }
@@ -727,7 +727,7 @@ fn print_system_info(info: &SystemInfo) {
         println!("⚡ CPU Speed:           {}", format_cpu_speed(info.cpu_speed_mhz));
     }
     if !info.gpu_names.is_empty() {
-        println!("🖱️ GPU:                 {}", info.gpu_names[0]);
+        println!("🖼️ GPU:                 {}", info.gpu_names[0]);
         for gpu in &info.gpu_names[1..] {
             println!("                        {}", gpu);
         }
