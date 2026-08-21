@@ -1,0 +1,8 @@
+[package]
+name    = "about"
+version = "0.1.0"
+edition = "2021"
+
+# libc is only needed on Unix platforms for POSIX syscall bindings.
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
