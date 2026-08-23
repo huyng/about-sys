@@ -11,7 +11,7 @@ struct SystemInfo {
     os_version:    String,
     distribution:  String,
     arch:          String,
-    endianness:    &'static str,
+    // endianness:    &'static str,
     cpu_cores:     usize,
     cpu_speed_mhz: f64,
     ram:           u64,
