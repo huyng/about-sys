@@ -81,10 +81,10 @@ fn normalize_arch(arch: &str) -> String {
 }
 
 // Runtime byte-order check — no compile-time flags needed.
-fn get_endianness() -> &'static str {
-    let x: u32 = 0x01020304;
-    if x.to_ne_bytes()[0] == 0x04 { "Little Endian" } else { "Big Endian" }
-}
+// fn get_endianness() -> &'static str {
+//     let x: u32 = 0x01020304;
+//     if x.to_ne_bytes()[0] == 0x04 { "Little Endian" } else { "Big Endian" }
+// }
 
 // #[cfg] is confined to the syscall sites inside this function; the function itself
 // always exists and always returns a String on every platform.
