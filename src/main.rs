@@ -34,7 +34,7 @@ fn get_system_info() -> SystemInfo {
         os_name:       std::env::consts::OS.to_string(),
         arch:          normalize_arch(std::env::consts::ARCH),
         cpu_cores:     std::thread::available_parallelism().map(|n| n.get()).unwrap_or(1),
-        endianness:    get_endianness(),
+        // endianness:    get_endianness(),
         hostname:      get_hostname(),
         os_version:    String::new(),
         distribution:  String::new(),
