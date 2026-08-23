@@ -721,7 +721,7 @@ fn print_system_info(info: &SystemInfo) {
     if info.is_termux    { println!("📱 Termux Environment:  Yes"); }
     if info.is_jailbroken { println!("⚠️  Jailbroken:          Yes"); }
     println!("🔧 Architecture:        {}", info.arch);
-    println!("📊 Endianness:          {}", info.endianness);
+    // println!("📊 Endianness:          {}", info.endianness);
     println!("💻 CPU Cores:           {}", info.cpu_cores);
     if info.cpu_speed_mhz > 0.0 {
         println!("⚡ CPU Speed:           {}", format_cpu_speed(info.cpu_speed_mhz));
