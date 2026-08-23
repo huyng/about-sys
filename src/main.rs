@@ -91,9 +91,9 @@ fn normalize_arch(arch: &str) -> String {
 fn get_hostname() -> String {
     #[cfg(unix)]
     unsafe {
-        let mut buf = [0i8; 256];
-        if libc::gethostname(buf.as_mut_ptr(), buf.len()) == 0 {
-            return CStr::from_ptr(buf.as_ptr()).to_string_lossy().into_owned();
+        let mut buf = [0u8; 256];
+        if libc::gethostname(buf.as_mut_ptr() as *mut libc::c_char, buf.len()) == 0 {
+            return CStr::from_ptr(buf.as_ptr() as *const libc::c_char).to_string_lossy().into_owned();
         }
     }
     #[cfg(target_os = "windows")]
